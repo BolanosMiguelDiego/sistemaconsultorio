@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	
 	$mensaje='';
 		try{
-			$conexion = new PDO('mysql:host=localhost;dbname=centromedico','root','12345');
+			$conexion = new PDO('mysql:host=192.168.88.26;dbname=centromedico','ubase','12345');
 			$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		}catch(PDOException $e){
 			echo "Error: ". $e->getMessage();

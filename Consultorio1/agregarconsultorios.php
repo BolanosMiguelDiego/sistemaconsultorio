@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	$nombre = filter_var(strtolower($_POST['nombre']),FILTER_SANITIZE_STRING);
 	$mensaje='';
 		try{
-			$conexion = new PDO('mysql:host=localhost;dbname=centromedico','root','12345');
+			$conexion = new PDO('mysql:host=192.168.88.26;dbname=centromedico','ubase','12345');
 		}catch(PDOException $e){
 			echo "Error: ". $e->getMessage();
 			die();
